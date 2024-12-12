@@ -4,7 +4,7 @@
         header("Location:login.php");
     }
 ?>
-    <h1 class="text-center mt-4">Bienvenido <?= $_SESSION['usuario']?></h1>
+    <h1 class="text-center mt-4">Bienvenido a tu cuenta, ¡disfrútalo! <?= $_SESSION['usuario']?></h1>
 <?php
     require_once("c://xampp/htdocs/login/view/head/footer.php");
 ?>

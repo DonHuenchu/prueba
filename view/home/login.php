@@ -26,7 +26,7 @@
                     <i id="eyepassword" class="fa-solid fa-eye changePassword"></i>
                 </button>
             </div>
-            <input type="password" name="password" class="form-control" id="password">
+            <input type="password" name="contraseña" class="form-control" id="password">
         </div>
         <?php if(!empty($_GET['erro'])):?>
             <div id="alertError" style="margin: auto;" class="alert alert-danger mb-2" role="alert">
