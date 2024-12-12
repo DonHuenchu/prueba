@@ -7,7 +7,7 @@
     min-height: 100vh;
 }
 .fondo_menu{
-    background-color: #212529;
+    background-color: #4184c7;
 }
 .boton{
     color: white;
@@ -23,7 +23,7 @@
     color: gray;
 }
 .fondo-login{
-    background-color: rgba(0, 0, 0, 0.938);
+    background-color: rgba(165, 64, 64, 0.938);
     min-height: 100vh;
     padding-top: 50px;
 }
