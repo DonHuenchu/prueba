@@ -4,3 +4,4 @@ CREATE TABLE usuarios(
 	PASSWORD VARCHAR(150) NOT null
 	
 )
+ALTER TABLE usuario ADD Rut varchar (15) UNIQUE NOT null;
