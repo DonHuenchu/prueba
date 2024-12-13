@@ -6,9 +6,15 @@
             require_once("c://xampp/htdocs/login/model/homeModel.php");
             $this->MODEL = new homeModel();
         }
-        public function guardarUsuario($correo,$contraseña){
+        public function guardarUsuario($correo,$contraseña, $rut){
             $valor = $this->MODEL->agregarNuevoUsuario($this->limpiarcorreo($correo),$this->encriptarcontraseña($this->limpiarcadena($contraseña)));
+            $rutLimpio = $this->limpiarRUT($rut);
             return $valor;
+        }
+        public function limpiarRUT($rut) {
+            $rut = strtoupper(trim($rut));
+            $rut = preg_replace('/[^0-9K]/', '', $rut); 
+            return $rut;
         }
         public function limpiarcadena($campo){
             $campo = strip_tags($campo);

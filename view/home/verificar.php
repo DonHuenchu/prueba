@@ -9,7 +9,7 @@
         $_SESSION['usuario'] = $correo;
         header("Location:panel_control.php");
     }else{
-        $error = "<li>Las claves son incorrectas</li>";
+        $error = "<li>Las credenciales no coinciden</li>";
         header("Location:login.php?error=".$error);
     }
 ?>
