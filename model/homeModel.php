@@ -7,10 +7,11 @@
             $pdo = new db();
             $this->PDO = $pdo->conexion();
         }
-        public function agregarNuevoUsuario($correo,$password){
-            $statement = $this->PDO->prepare("INSERT INTO usuarios values(null,:correo, :password)");
+        public function agregarNuevoUsuario($correo,$password, $rut){
+            $statement = $this->PDO->prepare("INSERT INTO usuarios values(null,:correo, :password, :rut)");
             $statement->bindParam(":correo",$correo);
             $statement->bindParam(":password",$password);
+            $statement->bindParam(":rut", $rut);
             try {
                 $statement->execute();
                 return true;
