@@ -7,7 +7,8 @@
             $this->MODEL = new homeModel();
         }
         public function guardarUsuario($correo,$contraseña, $rut){
-            $valor = $this->MODEL->agregarNuevoUsuario($this->limpiarcorreo($correo),$this->encriptarcontraseña($this->limpiarcadena($contraseña)));
+            $correoLimpio = $this->limpiarcorreo($correo);
+            $contraseñaEncriptada = $this->encriptarcontraseña($this->limpiarcadena($contraseña));
             $rutLimpio = $this->limpiarRUT($rut);
             return $valor;
         }
